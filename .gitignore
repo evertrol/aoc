@@ -1,0 +1,3 @@
+*.pyc
+*egg-info
+src/aoc/version.py
