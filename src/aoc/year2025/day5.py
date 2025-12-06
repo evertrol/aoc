@@ -34,7 +34,6 @@ def combine(intervals):
 
 def calc(intervals, idents):
     intervals = combine(intervals)
-    print(intervals)
     total2 = sum(interval[1] - interval[0] + 1 for interval in intervals)
 
     fresh = []
@@ -50,7 +49,6 @@ def calc(intervals, idents):
 
 def run(fname=0):
     intervals, idents = read(fname)
-    print(intervals)
     total1, total2 = calc(intervals, idents)
     return total1, total2
 
