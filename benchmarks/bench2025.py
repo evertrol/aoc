@@ -32,7 +32,7 @@ if number < 1:
     exit(1)
 
 
-for day in 1, 2, 3, 4, 5:
+for day in 1, 2, 3, 4, 5, 6:
     module = f"aoc.year2025.day{day}"
     fname = template[::-1].replace("0", f"{day}", 1)[::-1]
     print(f"day {day}:")

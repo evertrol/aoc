@@ -47,3 +47,11 @@ def test_day6():
     fname = Path(__file__).parent / "data" / "2025" / "day6.test.in"
     results = day6.run(fname)
     assert results == (4277556, 3263827)
+
+
+def test_day6b():
+    from aoc.year2025 import day6b
+
+    fname = Path(__file__).parent / "data" / "2025" / "day6.test.in"
+    results = day6b.run(fname)
+    assert results == (4277556, 3263827)

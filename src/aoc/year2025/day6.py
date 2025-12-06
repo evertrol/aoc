@@ -1,7 +1,7 @@
 def read(fname=0):
     data = []
     with open(fname) as file:
-        lines = [line.strip("\n") for line in file.readlines()]
+        lines = [line.strip("\n") for line in file]
     # Part 1
     for line in lines:
         items = line.strip().split()

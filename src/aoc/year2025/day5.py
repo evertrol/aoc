@@ -13,11 +13,10 @@ def read(fname=0):
 
 
 def combine(intervals):
-    intervals.sort(key=lambda interval: interval[0])
+    intervals.sort()
 
-    newintervals = []
     interval1 = intervals[0]
-    newintervals.append(interval1)
+    newintervals = [interval1]
     n = len(intervals)
     i = 1
     while i < n:
@@ -35,7 +34,7 @@ def combine(intervals):
 
 def calc(intervals, idents):
     intervals = combine(intervals)
-
+    print(intervals)
     total2 = sum(interval[1] - interval[0] + 1 for interval in intervals)
 
     fresh = []
@@ -51,6 +50,7 @@ def calc(intervals, idents):
 
 def run(fname=0):
     intervals, idents = read(fname)
+    print(intervals)
     total1, total2 = calc(intervals, idents)
     return total1, total2
 
