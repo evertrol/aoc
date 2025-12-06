@@ -32,13 +32,14 @@ if number < 1:
     exit(1)
 
 
-for day in 1, 2, 3, 4, 5, 6:
+def bench(day, fname=""):
     module = f"aoc.year2025.day{day}"
-    fname = template[::-1].replace("0", f"{day}", 1)[::-1]
-    print(f"day {day}:")
+    if not fname:
+        fname = template[::-1].replace("0", f"{day}", 1)[::-1]
     timer = timeit.Timer(f"run('{fname}')", setup=f"from {module} import run")
     results = timer.repeat(repeat=repeat, number=number)
     results = [result / number for result in results]
+    print(f"day {day}:")
     print(f"  min = {min(results) * 1000} ms")
     print(f"  max = {max(results) * 1000} ms")
     print(f"  average = {sum(results) / repeat * 1000} ms")
@@ -49,3 +50,13 @@ for day in 1, 2, 3, 4, 5, 6:
         else (results[repeat // 2 - 1] + results[repeat // 2]) / 2
     )
     print(f"  median = {median * 1000} ms")
+
+
+for day in 1, 2, 3, 4, 5, 6:
+    if day == 6:
+        bench(day)
+        # Benchmark alternative solution
+        fname = template[::-1].replace("0", f"{day}", 1)[::-1]
+        bench(f"{day}b", fname)
+    else:
+        bench(day)

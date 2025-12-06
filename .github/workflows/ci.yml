@@ -43,4 +43,4 @@ jobs:
           pytest
       - name: Run benchmarks
         run: |
-          sh benchmarks/run.sh
+          sh benchmarks/runall.sh

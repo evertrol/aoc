@@ -4,19 +4,19 @@ The solutions are coded as individual modules in a Python package called `aoc`. 
 
 ## Installation
 
-You can install the package simply with
+You can install the package in a virtual environment or directly as a user installation (in a `.local/` directory in your home directory), simply with
+
 
 ```shell
 pip install git+https://github.com/evertrol/aoc.git
 ```
 
-in a virtual environment or directly as a user installation (in `.local/` in your home directory).
-
 There are no external dependencies.
+
 
 ## Usage
 
-To run a solution, run the module, as follows:
+To run a solution, run the relevant module, as follows:
 
 ```shell
 python -m aoc.year2025.day1 day1.in
@@ -34,7 +34,7 @@ If you like timings, you can run some benchmarks. These are done using the `time
 
 Provide your own input data; or use the test data, but this will have limited functionality, since it is relatively small.
 
-The `benchmarks/run.sh` gives an example how to run the benchmarks. The arguments to `bench2025.py` are as follows:
+The `benchmarks/runall.sh` gives an example how to run the benchmarks. The arguments to `bench2025.py` are as follows:
 
 - a "template" file for the input data, where the `0` is replaced by the relevant day. The available days are listed in `bench2025.py` itself, in the for loop. All relevant files should be available, at the same path as the template argument, with the `0` replaced by the corresponding day number. Note that it is assumed that are no other `0`s following the the day number (but `0`s before are ok: replacement is done from the end, for only the last `0`).
 

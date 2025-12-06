@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# This runs all benchmarks, but for the test data!
+
 # Get absolute path of script's directory,
 # in case our working directory is different
 benchdir=$(dirname "$0")
