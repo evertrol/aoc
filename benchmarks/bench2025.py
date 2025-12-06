@@ -53,7 +53,7 @@ def bench(day, fname=""):
 
 
 for day in 1, 2, 3, 4, 5, 6:
-    if day in [4, 6]:
+    if day in [2, 4, 6]:
         bench(day)
         # Benchmark alternative solution
         fname = template[::-1].replace("0", f"{day}", 1)[::-1]
