@@ -6,4 +6,4 @@
 # in case our working directory is different
 benchdir=$(dirname "$0")
 
-python $benchdir/bench2025.py $benchdir/../tests/data/2025/day0.test.in 10 10
+python $benchdir/bench2025.py $benchdir/../tests/data/2025/day0.in 10 10
