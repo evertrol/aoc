@@ -79,3 +79,11 @@ def test_day7():
     fname = Path(__file__).parent / "data" / "2025" / "day7.in"
     results = day7.run(fname)
     assert results == (21, 40)
+
+
+def test_day8():
+    from aoc.year2025 import day8
+
+    fname = Path(__file__).parent / "data" / "2025" / "day8.in"
+    results = day8.run(fname)
+    assert results == (40, 25272)

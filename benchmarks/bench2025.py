@@ -52,7 +52,7 @@ def bench(day, fname=""):
     print(f"  median = {median * 1000} ms")
 
 
-for day in 1, 2, 3, 4, 5, 6, 7:
+for day in 1, 2, 3, 4, 5, 6, 7, 8:
     bench(day)
     if day in [2, 4, 6]:
         # Benchmark alternative solution
